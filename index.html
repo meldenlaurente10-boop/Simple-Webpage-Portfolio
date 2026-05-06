@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Hub</title>
+    <title>Portfolio Hub - Team Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -120,16 +120,25 @@
         </div>
     </section>
 
-    <section id="contact" class="section-container">
-        <h2 class="section-title">Get In Touch</h2>
+    <section id="contact" class="section-container stylized-contact">
+        <h2 class="section-title gold-text">Get In Touch</h2>
         <div class="form-wrapper">
             <form class="contact-form" action="#" method="POST">
-                <div class="input-group">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
+                
+                <div class="form-inputs-side">
+                    <div class="input-group">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <textarea placeholder="Your Message" rows="6" required></textarea>
                 </div>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
+
+                <div class="form-button-side">
+                    <button type="submit" class="styled-shield-btn">
+                        <i class="fa-solid fa-feather"></i>
+                    </button>
+                </div>
+
             </form>
         </div>
     </section>
