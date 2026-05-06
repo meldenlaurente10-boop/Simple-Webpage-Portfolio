@@ -1,86 +1,61 @@
-/* --- Enhanced Global Styles --- */
 body {
-    background: radial-gradient(circle at top right, #1b2735 0%, #090a0f 100%); /* Deeper, more luxurious dark gradient */
-    color: #e0e0e0;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
+    background-color: #2e2b5f; /* Matching the purple gradient from the image */
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
-/* --- Animated Neon Accents --- */
-@keyframes glow {
-    0% { box-shadow: 0 0 5px rgba(0, 212, 255, 0.2); }
-    50% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.4); }
-    100% { box-shadow: 0 0 5px rgba(0, 212, 255, 0.2); }
-}
-
-/* --- The "CyberPulse" Signature Card --- */
-.project-card {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    background: rgba(10, 10, 15, 0.8);
-    backdrop-filter: blur(20px) saturate(180%);
-    border-radius: 30px;
-    border: 1px solid rgba(0, 212, 255, 0.3);
-    overflow: hidden;
-    margin: 60px auto;
-    animation: glow 4s infinite ease-in-out;
-    transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1);
-}
-
-.project-card:hover {
-    transform: scale(1.02) translateY(-5px);
-    border-color: rgba(0, 212, 255, 0.6);
-}
-
-.project-image img {
+header h1 {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.8s ease;
+    text-align: center;
 }
 
-.project-card:hover .project-image img {
-    transform: scale(1.1); /* Subtle zoom effect on hover */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin-top: 30px;
 }
 
-/* --- Sophisticated Member Grid --- */
 .member-card {
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 24px;
-    padding: 25px;
-    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 180px;
+    transition: transform 0.3s ease;
 }
 
-.member-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 24px;
-    padding: 1px; 
-    background: linear-gradient(45deg, transparent, rgba(0, 212, 255, 0.4), transparent);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.4s;
+.member-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
 }
 
-.member-card:hover::before {
-    opacity: 1; /* Neon border glow on hover */
+.photo-placeholder {
+    width: 120px;
+    height: 150px;
+    background-color: #444;
+    margin: 0 auto 10px;
+    border-radius: 5px;
 }
 
-/* --- Floating Tech Badges --- */
-.project-tech span {
-    background: rgba(0, 212, 255, 0.1);
-    color: #00d4ff;
-    border: 1px solid rgba(0, 212, 255, 0.2);
-    padding: 6px 14px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-radius: 8px;
-    margin-right: 8px;
-    display: inline-block;
+h3 {
+    font-size: 1.1rem;
+    margin: 10px 0 5px;
+}
+
+p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.leader {
+    border: 2px solid #ffd700; /* Highlighting the leader */
 }
