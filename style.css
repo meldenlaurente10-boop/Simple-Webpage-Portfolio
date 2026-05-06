@@ -228,50 +228,114 @@ body {
     color: var(--primary-color);
 }
 
-/* Contact Form */
-.form-wrapper {
-    max-width: 700px;
-    margin: 0 auto;
+/* =========================================
+   Stylized Contact Section (Gold & Purple)
+   ========================================= */
+
+.stylized-contact {
+    background-color: #0d001a;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
 }
 
-.contact-form {
+.stylized-contact .section-title.gold-text {
+    color: #e6c78a;
+    font-size: 2.8rem;
+    margin-bottom: 4rem;
+}
+
+.stylized-contact .form-wrapper {
+    background-color: #1e0030;
+    border: 3px solid #d4af37;
+    border-radius: 25px;
+    padding: 2.5rem;
+    max-width: 850px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.stylized-contact .contact-form {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.stylized-contact .form-inputs-side {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.input-group {
+.stylized-contact .input-group {
     display: flex;
     gap: 1rem;
 }
 
-.contact-form input, 
-.contact-form textarea {
+.stylized-contact .contact-form input,
+.stylized-contact .contact-form textarea {
     width: 100%;
-    padding: 1.2rem;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    background: var(--card-bg);
-    color: var(--text-color);
+    background-color: #f9f0da;
+    border: 2px solid #b59410;
+    border-radius: 12px;
+    color: #4a3e21;
+    padding: 1rem 1.5rem;
     font-size: 1rem;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
     outline: none;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact-form input:focus, 
-.contact-form textarea:focus {
-    border-color: var(--primary-color);
+.stylized-contact .contact-form textarea {
+    resize: none;
 }
 
-.contact-form button {
-    width: 100%;
-    padding: 1.2rem;
-    font-size: 1rem;
+.stylized-contact .contact-form input:focus,
+.stylized-contact .contact-form textarea:focus {
+    border-color: #e6c78a;
+    box-shadow: 0 0 10px rgba(230, 199, 138, 0.5);
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    .input-group {
+.form-button-side {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stylized-contact .styled-shield-btn {
+    background: radial-gradient(circle, #e6c78a 30%, #b59410 100%);
+    color: #1e0030;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #d4af37;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stylized-contact .styled-shield-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.6);
+}
+
+/* Responsive Fix: Stack layout on small screens */
+@media (max-width: 768px) {
+    .stylized-contact .contact-form {
+        flex-direction: column;
+    }
+
+    .stylized-contact .form-inputs-side,
+    .form-button-side {
+        width: 100%;
+    }
+
+    .stylized-contact .input-group {
         flex-direction: column;
     }
 }
