@@ -1,61 +1,71 @@
 body {
-    background-color: #2e2b5f; /* Matching the purple gradient from the image */
+    background: radial-gradient(circle at top, #2e2b5f 0%, #090a0f 100%);
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 40px 20px;
+    margin: 0;
 }
 
 header h1 {
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 10px;
-    width: 100%;
-    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: 2px;
 }
 
 .team-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    max-width: 1000px;
-    margin-top: 30px;
+    gap: 25px;
+    max-width: 1100px;
 }
 
 .member-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: center;
     width: 180px;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden; /* Keeps the image from breaking the border-radius */
 }
 
 .member-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.photo-placeholder {
-    width: auto;
-    height: auto;
-    background-color: #444;
-    margin: 0 auto 10px;
-    border-radius: 5px;
+/* --- THE FIX FOR YOUR IMAGES --- */
+.member-card img {
+    width: 100%; /* Forces image to stay inside the card width */
+    height: 220px; /* Uniform height for all photos */
+    object-fit: cover; /* Crops the photo to fit the height without stretching */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.leader {
+    border: 2px solid #ffd700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
 }
 
 h3 {
     font-size: 1.1rem;
-    margin: 10px 0 5px;
+    margin: 5px 0;
+    color: #fff;
 }
 
 p {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-.leader {
-    border: 2px solid #ffd700; /* Highlighting the leader */
+    font-size: 0.85rem;
+    margin: 0;
+    color: #00d4ff; /* Adds a bit of brand color to the roles */
+    font-weight: bold;
 }
