@@ -229,21 +229,51 @@ body {
 }
 
 /* Contact Form */
-.contact-form {
-    max-width: 600px;
+.form-wrapper {
+    max-width: 700px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-form input, 
+.contact-form textarea {
     width: 100%;
-    padding: 1rem;
+    padding: 1.2rem;
     border-radius: 8px;
     border: 1px solid var(--border-color);
     background: var(--card-bg);
     color: var(--text-color);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+    }
 }
 
 /* Footer */
